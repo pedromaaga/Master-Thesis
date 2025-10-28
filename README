@@ -1,0 +1,34 @@
+# Master-Thesis — Code summary (root README)
+
+This repository collects code used in the Master thesis: ANSYS projects, DMS discrete optimizer, MATLAB postprocessing, verification data and an RL optimization scaffold.
+
+Top-level folders
+- Code Ansys
+  - ANSYS APDL scripts and input/output text templates used by the FEM evaluations.
+- Code Ansys Reference
+  - Reference inputs and example outputs for regression/verification.
+- Code Results
+  - MATLAB scripts to postprocess ANSYS outputs, compute EMCC, select optimal patch placements and produce plots.
+- Code Verification ANSYS
+  - Exported verification datasets (control vs no-control) used for validation.
+- DMS_Discreto.6_multivariavel
+  - Discrete Multi-Start (DMS) driver and ANSYS interface (driver_dms_discreto.m, funcFF.m, logs, pareto files).
+- GLODS_Discreto_RL_1.0
+  - RL / discrete global optimization scaffold (placeholder). See GLODS README for details.
+
+Quick usage / workflow
+1. Configure ANSYS path and permissions so MATLAB can launch ANSYS batch runs (see DMS_Discreto.6_multivariavel/funcFF.m).
+2. Run optimizer:
+   - DMS (example): open MATLAB, add repository to path, run:
+     >> cd('DMS_Discreto.6_multivariavel')
+     >> driver_dms_discreto
+   - RL (planned): implement env wrapper and training script in GLODS_Discreto_RL_1.0.
+3. After evaluations, run postprocessing:
+   - Open Code Results and run:
+     >> result_optimal_position_multiobj_modal
+     >> result_harmonic_analysis
+4. Visualize / verify using files under Code Verification ANSYS.
+
+Notes & recommendations
+- Use a cache or surrogate when experimenting to avoid repeated costly ANSYS runs.
+- Maintain consistent working directory when scripts call or write files (many scripts expect relative paths).

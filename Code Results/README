@@ -1,0 +1,21 @@
+# Code Results — README
+
+Purpose
+- MATLAB post-processing and plotting scripts that analyze DMS / ANSYS outputs and produce figures / optimal positions.
+
+Important scripts
+- [Code Results/result_optimal_position_multiobj_modal.m](Code Results/result_optimal_position_multiobj_modal.m) — computes Pareto front analysis and selects representative points (harmonic mean, euclidean, minmax, maxmin).
+- [Code Results/result_optimal_position_uniobj_modal.m](Code Results/result_optimal_position_uniobj_modal.m) — selects best EMCC per mode (uni-objective).
+- [Code Results/result_harmonic_analysis.m](Code Results/result_harmonic_analysis.m) — harmonic analysis plotting routine (loads amplitude & frequency files interactively).
+- Utilities:
+  - [`optimize_patch_centers`](Code Results/optimize_patch_centers.m) — converts percentage positions to absolute centers and validates overlap.
+  - [`clean_and_sort_centers`](Code Results/clean_and_sort_centers.m) — removes invalid centers ([-1,-1]) and sorts them.
+  - [`transform_intervals`](Code Results/transform_intervals.m) — map values in [0,1] to physical intervals.
+  - [`plot_patches_with_domain`](Code Results/plot_patches_with_domain.m) — plotting helper.
+
+How to run
+- Load CACHE.mat as the scripts expect (`load CACHE.mat`) then run the appropriate `result_*` script.
+- `result_optimal_position_multiobj_modal.m` expects `CACHE.X` and `CACHE.OF` structure.
+
+Notes
+- `result_optimal_position_multiobj_modal.m` uses `paretoGroup` (external), ensure it is on the MATLAB path.

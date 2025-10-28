@@ -1,0 +1,12 @@
+# Code Verification ANSYS — README
+
+Purpose
+- Verification data files from ANSYS (control vs no-control) used to validate the simulation workflow and compare results.
+
+Key files
+- [Code Verification ANSYS/Output_DataAmplitude_NoControl.txt](Code Verification ANSYS/Output_DataAmplitude_NoControl.txt)
+- [Code Verification ANSYS/Output_DataAmplitude_Control.txt](Code Verification ANSYS/Output_DataAmplitude_Control.txt)
+- (Other Output_* files in this folder)
+
+Usage
+- Load these text files in MATLAB (e.g., `fscanf` or `readmatrix`) to reproduce verification plots in `Code Results/result_harmonic_analysis.m`.

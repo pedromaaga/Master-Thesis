@@ -1,0 +1,21 @@
+# Code Ansys — README (brief)
+
+Purpose
+- Scripts / project files to run ANSYS simulations used by the thesis.
+
+Key files
+- [Code Ansys/CodeProject](Code Ansys/CodeProject) — ANSYS project / input script.
+- [Code Ansys/CodeProject_Video](Code Ansys/CodeProject_Video) — backup / video version.
+- [Code Ansys/Input_PositionPatches.txt](Code Ansys/Input_PositionPatches.txt) — patch center positions used by ANSYS.
+- [Code Ansys/Input_GeometricParameters.txt](Code Ansys/Input_GeometricParameters.txt) — geometric parameters written by MATLAB driver.
+- [Code Ansys/Input_EletricValues.txt](Code Ansys/Input_EletricValues.txt) — electrical excitation parameters.
+- [Code Ansys/Output_DataAmplitude.txt](Code Ansys/Output_DataAmplitude.txt) — amplitude output (used for analysis).
+- [Code Ansys/Output_DataFrequency.txt](Code Ansys/Output_DataFrequency.txt) — frequency output.
+- [Code Ansys/Output_EMCC.txt](Code Ansys/Output_EMCC.txt) — EMCC outputs read by MATLAB.
+
+How it is used (quick)
+- MATLAB writes Input_*.txt files and calls the ANSYS batch executable (see DMS folder `funcFF.m`).
+- After ANSYS finishes, MATLAB reads Output_*.txt files and uses them to compute objective values.
+
+Notes
+- Keep ANSYS path and permission to run the ANSYS executable.

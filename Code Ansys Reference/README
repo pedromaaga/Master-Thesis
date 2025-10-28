@@ -1,0 +1,13 @@
+# Code Ansys Reference — README
+
+Purpose
+- Reference/backup ANSYS inputs and example outputs used for verification.
+
+Key files
+- [Code Ansys Reference/CodeProject](Code Ansys Reference/CodeProject)
+- [Code Ansys Reference/Input_GeometricParameters.txt](Code Ansys Reference/Input_GeometricParameters.txt)
+- [Code Ansys Reference/Input_EletricValues.txt](Code Ansys Reference/Input_EletricValues.txt)
+- [Code Ansys Reference/Output_DataAmplitude.txt](Code Ansys Reference/Output_DataAmplitude.txt)
+
+Usage
+- Compare outputs in this folder with active runs in `Code Ansys/` for debugging.
